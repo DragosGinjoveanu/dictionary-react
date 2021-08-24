@@ -65,9 +65,7 @@ function Dictionary() {
   }
 
   const addWord = (word) => {
-    words.push(word);
-    setWords(words)
-    //WordList not updating
+    setWords(words.concat(word));
   }
 
   let alert;
@@ -86,8 +84,8 @@ function Dictionary() {
         </label>
         <AddWord changeDuplicate = {changeDuplicate} addWord = {addWord} currentWord = {currentWord} words = {words}/>
         <SearchWord changeDuplicate = {changeDuplicate} currentWord = {currentWord} words = {words}/>
-        <WordList words = {words}/>
       </form>
+      <WordList words = {words}/>
     </div>
   );
 }
